@@ -1,0 +1,34 @@
+# Core Numerical & Image Processing
+numpy>=1.24.0
+scipy>=1.11.0
+pillow>=10.0.0
+scikit-image>=0.21.0
+imageio>=2.30.0
+
+# 3D Mesh Geometry & Export
+trimesh[easy]>=4.0.0
+fast-simplification>=0.1.8
+pygltflib>=1.16.0
+xatlas>=0.0.9
+
+# Deep Learning & Neural Inference
+torch>=2.1.0
+torchvision>=0.16.0
+accelerate>=0.28.0
+diffusers>=0.27.0
+safetensors>=0.4.0
+einops>=0.7.0
+omegaconf>=2.3.0
+onnxruntime>=1.17.0
+
+# Background Removal (Lightweight u2netp)
+rembg>=2.0.55
+
+# Web UI & Interactive Interfaces
+gradio>=4.30.0
+ipywidgets>=8.1.0
+
+# Utilities & Configuration
+python-dotenv>=1.0.0
+requests>=2.31.0
+tqdm>=4.66.0

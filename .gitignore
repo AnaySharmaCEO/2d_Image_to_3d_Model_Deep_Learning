@@ -1,0 +1,76 @@
+# Python & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.dylib
+*.dll
+
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyTorch, Hugging Face, Model Weights
+checkpoints/
+weights/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.bin
+*.onnx
+cache/
+hf_cache/
+TripoSR/
+Hunyuan3D-2/
+
+# Output Assets & Renders (Keep sample demos, ignore generated bulk)
+outputs/
+outputs_bundle.zip
+*.glb
+*.stl
+*.obj
+*.ply
+!examples/sample_outputs/*
+
+# Environment & Secrets
+.env
+.env.local
+.env.*.local
+*.key
+credentials.json
+
+# Jupyter & Testing
+.ipynb_checkpoints
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# IDE & OS
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini

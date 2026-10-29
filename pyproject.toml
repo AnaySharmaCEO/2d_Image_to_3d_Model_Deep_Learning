@@ -1,0 +1,91 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "image-to-3d-agent"
+version = "5.0.0"
+description = "Intelligent 3-Tier Multi-Backend 3D Mesh Generation Agent with Watchdog Routing & Fail-Safe Fallbacks"
+readme = "README.md"
+authors = [
+    { name = "Anany Sharma" },
+    { name = "Anshuman Rai" }
+]
+license = { text = "MIT" }
+requires-python = ">=3.10"
+keywords = [
+    "3d-reconstruction",
+    "deep-learning",
+    "triposr",
+    "hunyuan3d",
+    "gemini",
+    "mesh-generation",
+    "computer-vision",
+    "trimesh",
+    "gradio"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Multimedia :: Graphics :: 3D Modeling"
+]
+dependencies = [
+    "numpy>=1.24.0",
+    "scipy>=1.11.0",
+    "pillow>=10.0.0",
+    "scikit-image>=0.21.0",
+    "trimesh[easy]>=4.0.0",
+    "fast-simplification>=0.1.8",
+    "pygltflib>=1.16.0",
+    "rembg>=2.0.55",
+    "gradio>=4.30.0",
+    "python-dotenv>=1.0.0",
+    "requests>=2.31.0",
+    "tqdm>=4.66.0"
+]
+
+[project.optional-dependencies]
+cuda = [
+    "torch>=2.1.0",
+    "torchvision>=0.16.0",
+    "accelerate>=0.28.0",
+    "diffusers>=0.27.0",
+    "safetensors>=0.4.0",
+    "einops>=0.7.0",
+    "omegaconf>=2.3.0"
+]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=4.1.0",
+    "ruff>=0.4.0",
+    "black>=24.0.0"
+]
+
+[project.scripts]
+image3d = "src.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+ignore = ["E501"]
